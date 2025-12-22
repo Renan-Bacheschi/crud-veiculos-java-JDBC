@@ -1,0 +1,10 @@
+# Pastas de bibliotecas e compilação
+/lib/
+/out/
+/target/
+/.idea/
+*.iml
+
+# arquivos de configuração sensíveis
+src/main/resources/db.properties
+db.properties
