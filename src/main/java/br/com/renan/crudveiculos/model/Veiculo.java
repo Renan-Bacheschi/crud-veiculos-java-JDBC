@@ -2,14 +2,18 @@ package br.com.renan.crudveiculos.model;
 
 public class Veiculo {
 
-    private Long id;
+    private  Long id;
     private String marca;
-    private String modelo;
+    private  String modelo;
     private int ano;
     private double preco;
 
 
-    public Veiculo() {
+    public Veiculo(String marca, String modelo, int ano, double preco) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.preco = preco;
     }
 
     public Veiculo(Long id, String marca, String modelo, int ano, double preco) {
@@ -20,13 +24,7 @@ public class Veiculo {
         this.preco = preco;
     }
 
-    // Construtor sem ID
-    public Veiculo(String marca, String modelo, int ano, double preco) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.ano = ano;
-        this.preco = preco;
-    }
+
 
     public Long getId() {
         return id;

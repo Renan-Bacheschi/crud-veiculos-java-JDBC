@@ -80,12 +80,13 @@ public class VeiculoDAOImpl implements VeiculoDAO {
 
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
-                    Veiculo v = new Veiculo();
+                    Veiculo v = new Veiculo(
+                        rs.getString("marca"),
+                        rs.getString("modelo"),
+                        rs.getInt("ano"),
+                        rs.getDouble("preco")
+                    );
                     v.setId(rs.getLong("id"));
-                    v.setMarca(rs.getString("marca"));
-                    v.setModelo(rs.getString("modelo"));
-                    v.setAno(rs.getInt("ano"));
-                    v.setPreco(rs.getDouble("preco"));
                     return v;
                 }
             }
@@ -107,12 +108,13 @@ public class VeiculoDAOImpl implements VeiculoDAO {
              ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
-                Veiculo v = new Veiculo();
+                Veiculo v = new Veiculo(
+                    rs.getString("marca"),
+                    rs.getString("modelo"),
+                    rs.getInt("ano"),
+                    rs.getDouble("preco")
+                );
                 v.setId(rs.getLong("id"));
-                v.setMarca(rs.getString("marca"));
-                v.setModelo(rs.getString("modelo"));
-                v.setAno(rs.getInt("ano"));
-                v.setPreco(rs.getDouble("preco"));
                 veiculos.add(v);
             }
         } catch (SQLException e) {
@@ -122,7 +124,7 @@ public class VeiculoDAOImpl implements VeiculoDAO {
         }
 
         return veiculos;
-    };
+    }
 
     public List<Veiculo> buscarPorMarca(String marca) {
         List<Veiculo> veiculos = new ArrayList<>();
@@ -135,12 +137,13 @@ public class VeiculoDAOImpl implements VeiculoDAO {
 
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
-                    Veiculo v = new Veiculo();
+                    Veiculo v = new Veiculo(
+                        rs.getString("marca"),
+                        rs.getString("modelo"),
+                        rs.getInt("ano"),
+                        rs.getDouble("preco")
+                    );
                     v.setId(rs.getLong("id"));
-                    v.setMarca(rs.getString("marca"));
-                    v.setModelo(rs.getString("modelo"));
-                    v.setAno(rs.getInt("ano"));
-                    v.setPreco(rs.getDouble("preco"));
                     veiculos.add(v);
                 }
             }
