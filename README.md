@@ -1,4 +1,10 @@
-# CRUD de Veículos – Java
+# CRUD de Veículos — JDBC
+
+> ⚠️ Projeto desativado.
+
+Mantido no GitHub como registro de um projeto do início dos meus estudos em Java e JDBC.
+
+Atualmente está com problemas de execução e não receberá manutenção, para preservar a evolução do código.
 
 Este projeto foi desenvolvido como parte de um desafio técnico para uma vaga de estágio.
 O objetivo foi demonstrar conhecimentos em Java puro,
